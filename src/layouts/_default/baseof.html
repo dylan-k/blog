@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}" class="no-js">
+  <head>
+    {{ partial "head" . }}
+  </head>
+  {{ block "body_override" . }}<body>{{ end }}
+    {{ partial "navbar" . }}
+    {{ partial "hero" . }}
+    {{ partial "subnav" . }}
+
+    <div class="container">
+      <div id="carbonads-container">
+        <div class="carbonad">
+          <div id="azcarbon"></div>
+        </div>
+      </div>
+
+      {{ block "main" . }}
+      {{ end }}
+    </div>
+
+    {{ partial "footer" . }}
+
+    {{ partial "lazyload" . }}
+    {{ partial "carbonads" . }}
+
+    {{ block "footer" . }}
+    {{ end }}
+  </body>
+</html>
